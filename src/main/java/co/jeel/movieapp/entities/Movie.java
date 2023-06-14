@@ -22,7 +22,7 @@ public class Movie {
     String title;
 
     // one-to-one relationship
-    @OneToOne(mappedBy = "movie", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "movie", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private MovieDetails movieDetails;
 
     // one-to-many relationship

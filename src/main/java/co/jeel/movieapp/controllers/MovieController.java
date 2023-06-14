@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.jeel.movieapp.DTOs.MovieDTO;
+import co.jeel.movieapp.DTOs.MovieDto;
 import co.jeel.movieapp.services.MovieService;
 
 @RestController
@@ -27,23 +27,23 @@ class MovieController {
     private final MovieService movieService;
 
     @GetMapping
-    public List<MovieDTO> getAll() {
+    public List<MovieDto> getAll() {
         return this.movieService.getAllMovies();
     }
 
     @GetMapping("{id}")
-    public MovieDTO getById(@PathVariable("id") Long id) {
+    public MovieDto getById(@PathVariable("id") Long id) {
         return this.movieService.getMovieById(id);
     }
 
     @PostMapping
-    public MovieDTO create(@RequestBody MovieDTO movie) {
+    public MovieDto create(@RequestBody MovieDto movie) {
             return this.movieService.createMovie(movie);
     }
 
     @PutMapping("{id}")
     @ResponseStatus(HttpStatus.CREATED)
-    public MovieDTO update(@PathVariable("id") Long id, @RequestBody MovieDTO movie) {
+    public MovieDto update(@PathVariable("id") Long id, @RequestBody MovieDto movie) {
         return movieService.updateMovie(id, movie);
     }
 

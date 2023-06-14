@@ -6,8 +6,13 @@ POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-  "name": "movie 4",
-  "rating": 2.643
+  "title": "movie 4",
+  "details": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 12.563
+  }
 }
 
 ###

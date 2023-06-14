@@ -1,0 +1,596 @@
+GET http://localhost:3000/movies
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-14T181044.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 146
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "details": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 12.563
+  }
+}
+
+<> 2023-06-14T181039.200.json
+
+###
+
+GET http://localhost:3000/movies
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-14T180411.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 146
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "details": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 12.563
+  }
+}
+
+<> 2023-06-14T180405.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 146
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "details": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 12.563
+  }
+}
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 146
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "details": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 12.563
+  }
+}
+
+###
+
+GET http://localhost:3000/movies
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-14T175837.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 146
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "details": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 12.563
+  }
+}
+
+<> 2023-06-14T175830.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 162
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "details": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 12.563,
+    "movie": 1
+  }
+}
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 162
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "details": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 12.563,
+    "movie": 1
+  }
+}
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 146
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "details": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 12.563
+  }
+}
+
+<> 2023-06-14T165936.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 146
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "details": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 12.563
+  }
+}
+
+<> 2023-06-14T164316.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 146
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "details": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 12.563
+  }
+}
+
+<> 2023-06-14T163043.200.json
+
+###
+
+GET http://localhost:3000/movies
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-14T163022.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 146
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "details": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 12.563
+  }
+}
+
+<> 2023-06-14T162836.200.json
+
+###
+
+GET http://localhost:3000/movies
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-14T161006.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 151
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "movieDetails": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 12.563
+  }
+}
+
+<> 2023-06-14T161001.200.json
+
+###
+
+GET http://localhost:3000/movies
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-14T160201.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 146
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "details": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 12.563
+  }
+}
+
+<> 2023-06-14T160153.200.json
+
+###
+
+GET http://localhost:3000/movies
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-14T150836.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 43
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "rating": 2.534
+}
+
+<> 2023-06-14T150757.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 43
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "rating": 2.534
+}
+
+<> 2023-06-14T150756.200.json
+
+###
+
+GET http://localhost:3000/movies
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-14T144729.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 43
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "rating": 2.534
+}
+
+<> 2023-06-14T144653.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 43
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "rating": 2.534
+}
+
+<> 2023-06-14T144652.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 43
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "rating": 2.534
+}
+
+<> 2023-06-14T144330.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 43
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "rating": 2.534
+}
+
+<> 2023-06-14T144329.200.json
+
+###
+
+GET http://localhost:3000/movies
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-14T143249.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 43
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4",
+  "rating": 2.534
+}
+
+<> 2023-06-14T143247.200.json
+
+###
+
+GET http://localhost:3000/movies
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-14T143234.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "movie 4"
+}
+
+<> 2023-06-14T143230.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 23
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "movie 4"
+}
+
+<> 2023-06-14T143157.500.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 42
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "movie 4",
+  "rating": 2.643
+}
+
+<> 2023-06-14T143124.500.json
+
+###
+
+GET http://localhost:3000/movies
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-14T115447.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 42
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "movie 4",
+  "rating": 2.643
+}
+
+<> 2023-06-14T115420.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 23
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "movie 3"
+}
+
+<> 2023-06-14T115357.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 23
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "movie 2"
+}
+
+<> 2023-06-14T115351.200.json
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+Content-Length: 23
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "movie 1"
+}
+
+<> 2023-06-14T115253.200.json
+
+###
+
