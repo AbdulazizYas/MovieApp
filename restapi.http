@@ -7,7 +7,7 @@ Content-Type: application/json
 
 {
   "title": "movie 4",
-  "details": {
+  "movieDetails": {
     "desc": "brief desc",
     "duration": 121,
     "release_date": "2004-12-12",

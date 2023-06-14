@@ -15,7 +15,7 @@ import co.jeel.movieapp.entities.Movie;
 @Mapper(componentModel = "spring")
 public interface MovieMapper {
 
-  MovieDto toMovieDto(Movie movie);
+  MovieDto toMovieDto(Movie movie, MovieDetails movieDetails);
 
   GetMovieDto toGetMovieDto(Movie movie);
 

@@ -15,6 +15,6 @@ public class MovieDto {
 
   private String title;
 
-  private MovieDetailsDto details;
+  private MovieDetailsDto movieDetails;
 
 }

@@ -29,24 +29,24 @@ public class MovieService {
   }
 
   public MovieDto getMovieById(Long id){
-    return movieMapper.toMovieDto(
-      movieRepo.findById(id).orElseThrow(() -> new NotFoundException("Movie not found with id: " + id))
-    );
+    Movie m = movieRepo.findById(id).orElseThrow(() -> new NotFoundException("Movie not found with id: " + id));
+
+    return movieMapper.toMovieDto(m,m.getMovieDetails());
   }
 
   public MovieDto createMovie(MovieDto movieDTO) {
     log.info("Creating a new movie with ID: ");
 
     Movie movie = movieMapper.toMovie(movieDTO);
-    MovieDetails details = movieMapper.toMovieDetails(movieDTO.getDetails());
+    MovieDetails details = movieMapper.toMovieDetails(movieDTO.getMovieDetails());
 
     movie.setMovieDetails(details);
     details.setMovie(movie);
 
     Movie savedMovie = movieRepo.save(movie);
-    MovieDetails savedMovieDetails = movieDetailsRepo.save(details);
+//    MovieDetails savedMovieDetails = movieDetailsRepo.save(details);
 
-    return movieMapper.toMovieDto(savedMovie);
+    return movieMapper.toMovieDto(savedMovie, savedMovie.getMovieDetails());
   }
   
   
@@ -56,7 +56,7 @@ public class MovieService {
       movieMapper.updateMovieFromDto(movieDTO,movie);
       Movie updatedMovie = movieRepo.save(movie);
 
-      return movieMapper.toMovieDto(updatedMovie);
+      return movieMapper.toMovieDto(updatedMovie, updatedMovie.getMovieDetails());
   }
   
   
