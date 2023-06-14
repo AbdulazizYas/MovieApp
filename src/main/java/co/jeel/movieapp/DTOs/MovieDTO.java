@@ -10,7 +10,6 @@ import lombok.ToString;
 @ToString
 public class MovieDTO {
 
-  private String name;
+  private String title;
 
-  private Double rating = 0.0;
 }

@@ -1,0 +1,17 @@
+GET http://localhost:3000/movies
+Accept: application/json
+
+###
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "name": "movie 4",
+  "rating": 2.643
+}
+
+###
+
+
+
+

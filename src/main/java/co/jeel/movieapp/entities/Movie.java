@@ -1,14 +1,11 @@
 package co.jeel.movieapp.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
 import lombok.*;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -22,9 +19,26 @@ public class Movie {
     Long id;
 
     @Column(nullable = false)
-    String name;
+    String title;
 
-    @Column(columnDefinition="Decimal(10,2) default 0")
-    Double rating;
+    // one-to-one relationship
+    @OneToOne(mappedBy = "movie", cascade = CascadeType.ALL)
+    private MovieDetails movieDetails;
+
+    // one-to-many relationship
+    @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL)
+    private List<Review> reviews;
+
+    // many-to-many relationship
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "movie_genre",
+            joinColumns = @JoinColumn(name = "movie_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "genre_id", referencedColumnName = "id")
+    )
+    private List<Genre> genres;
+
+
+
 
 }

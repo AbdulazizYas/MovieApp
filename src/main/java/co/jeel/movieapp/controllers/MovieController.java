@@ -2,7 +2,7 @@ package co.jeel.movieapp.controllers;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,13 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 import co.jeel.movieapp.DTOs.MovieDTO;
 import co.jeel.movieapp.services.MovieService;
 
-
 @RestController
 @RequestMapping("/movies")
+@RequiredArgsConstructor
 class MovieController {
 
-    @Autowired
-    MovieService movieService;
+
+    private final MovieService movieService;
 
     @GetMapping
     public List<MovieDTO> getAll() {

@@ -21,8 +21,7 @@ public class MovieService {
   private final MovieMapper movieMapper;
 
   public List<MovieDTO> getAllMovies(){
-    Movie m = new Movie();
-    log.info("the rating of m is {}", m.getRating());
+
     return movieMapper.toMovieDtoList(movieRepo.findAll());
   }
 
