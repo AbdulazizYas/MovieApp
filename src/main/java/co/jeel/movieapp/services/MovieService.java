@@ -2,8 +2,16 @@ package co.jeel.movieapp.services;
 
 import java.util.List;
 
+import co.jeel.movieapp.DTOs.GenreDto;
+import co.jeel.movieapp.DTOs.ReviewDto;
+import co.jeel.movieapp.entities.Genre;
 import co.jeel.movieapp.entities.MovieDetails;
+import co.jeel.movieapp.entities.Review;
+import co.jeel.movieapp.mappers.GenreMapper;
+import co.jeel.movieapp.mappers.ReviewMapper;
+import co.jeel.movieapp.repositories.GenreRepo;
 import co.jeel.movieapp.repositories.MovieDetailsRepo;
+import co.jeel.movieapp.repositories.ReviewRepo;
 import org.springframework.stereotype.Service;
 
 import co.jeel.movieapp.exceptions.NotFoundException;
@@ -20,8 +28,11 @@ import lombok.extern.slf4j.Slf4j;
 public class MovieService {
 
   private final MovieRepo movieRepo;
-  private final MovieDetailsRepo movieDetailsRepo;
+  private final GenreRepo genreRepo;
+
   private final MovieMapper movieMapper;
+  private final ReviewMapper reviewMapper;
+  private final GenreMapper genreMapper;
 
   public List<MovieDto> getAllMovies(){
 
@@ -29,9 +40,9 @@ public class MovieService {
   }
 
   public MovieDto getMovieById(Long id){
-    Movie m = movieRepo.findById(id).orElseThrow(() -> new NotFoundException("Movie not found with id: " + id));
+    Movie movie = movieRepo.findById(id).orElseThrow(() -> new NotFoundException("Movie not found with id: " + id));
 
-    return movieMapper.toMovieDto(m,m.getMovieDetails());
+    return movieMapper.toMovieDto(movie,movie.getMovieDetails());
   }
 
   public MovieDto createMovie(MovieDto movieDTO) {
@@ -44,7 +55,6 @@ public class MovieService {
     details.setMovie(movie);
 
     Movie savedMovie = movieRepo.save(movie);
-//    MovieDetails savedMovieDetails = movieDetailsRepo.save(details);
 
     return movieMapper.toMovieDto(savedMovie, savedMovie.getMovieDetails());
   }
@@ -67,4 +77,45 @@ public class MovieService {
         throw new NotFoundException("Movie not found with id: " + id);
     }
 }
+
+  public void reviewMovie(Long id, ReviewDto reviewDto){
+    Movie movie = movieRepo.findById(id).orElseThrow(() -> new NotFoundException("Movie not found with id: " + id));
+
+    Review review = reviewMapper.toReview(reviewDto);
+
+    movie.getReviews().add(review);
+    review.setMovie(movie);
+
+    movieRepo.save(movie);
+
+  }
+
+  public List<ReviewDto> getReviewsByMovie(Long id){
+    Movie movie = movieRepo.findById(id).orElseThrow(() -> new NotFoundException("Movie not found with id: " + id));
+
+
+    return reviewMapper.toReviewDtoList(movie.getReviews());
+  }
+
+  public List<GenreDto> getMovieGenres(Long movieId){
+    Movie movie = movieRepo.findById(movieId).orElseThrow(() -> new NotFoundException("Movie not found with id: " + movieId));
+
+    return  genreMapper.toGenreDtoList(movie.getGenres());
+  }
+
+  public void addGenreToMovie(String genreName, Long movieId){
+    Movie movie = movieRepo.findById(movieId).orElseThrow(() -> new NotFoundException("Movie not found with id: " + movieId));
+
+    Genre genre = genreRepo.findGenreByName(genreName);
+
+    if (genre == null){
+      throw new NotFoundException("Movie not found with name: " + genreName);
+    }
+
+    movie.getGenres().add(genre);
+    genre.getMovies().add(movie);
+
+    movieRepo.save(movie);
+  }
+
 }

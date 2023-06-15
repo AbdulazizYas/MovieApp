@@ -16,7 +16,45 @@ Content-Type: application/json
 }
 
 ###
+PUT http://localhost:3000/movies/1
+Content-Type: application/json
+
+{
+  "title": "movie 1111",
+  "movieDetails": {
+    "desc": "brief desc",
+    "duration": 121,
+    "release_date": "2004-12-12",
+    "rating": 1112.563
+  }
+}
+
+###
+DELETE http://localhost:3000/movies/1
+
+###
 
 
 
 
+
+
+POST http://localhost:3000/movies/4/review
+Content-Type: application/json
+
+{
+  "reviewer": "Zaid",
+  "feedback": "boring",
+  "rating": 1
+}
+
+
+###
+GET http://localhost:3000/movies/4/reviews
+Accept: application/json
+
+###
+GET http://localhost:3000/reviews/7
+Accept: application/json
+
+###

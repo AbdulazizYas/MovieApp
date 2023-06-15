@@ -12,9 +12,8 @@ import java.time.LocalDate;
 public class ReviewDto {
 
     private String reviewer;
-    private String reviewDesc;
+    private String feedback;
     private int rating;
 
-    private Long movie_id;
 
 }

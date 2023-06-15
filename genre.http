@@ -1,0 +1,28 @@
+### Add genre
+POST http://localhost:3000/genres
+Content-Type: application/json
+
+{
+  "name": "test"
+}
+
+### Get All Genres
+GET http://localhost:3000/genres
+Accept: application/json
+
+### Get All movies for specific genre
+GET http://localhost:3000/genres/test
+Accept: application/json
+
+### Get Movie's genres
+GET http://localhost:3000/movies/1/genres
+Accept: application/json
+
+### Add genre to a Movie
+POST http://localhost:3000/movies/1/genres/test
+Accept: application/json
+
+### Delete Genre
+DELETE http://localhost:3000/genres/
+
+###

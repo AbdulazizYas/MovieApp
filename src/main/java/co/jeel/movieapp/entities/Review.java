@@ -19,7 +19,7 @@ public class Review {
     private Long id;
 
     private String reviewer;
-    private String reviewDesc;
+    private String feedback;
     private int rating;
 
     @ManyToOne(optional = false)
