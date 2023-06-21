@@ -3,8 +3,8 @@ package co.jeel.movieapp.controllers;
 import java.util.List;
 
 import co.jeel.movieapp.DTOs.GenreDto;
+import co.jeel.movieapp.DTOs.Movie.MovieListDto;
 import co.jeel.movieapp.DTOs.ReviewDto;
-import co.jeel.movieapp.entities.Review;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.jeel.movieapp.DTOs.MovieDto;
+import co.jeel.movieapp.DTOs.Movie.MovieDto;
 import co.jeel.movieapp.services.MovieService;
 
 @RestController
@@ -30,7 +30,7 @@ class MovieController {
     private final MovieService movieService;
 
     @GetMapping
-    public List<MovieDto> getAll() {
+    public List<MovieListDto> getAll() {
         return this.movieService.getAllMovies();
     }
 

@@ -1,12 +1,9 @@
 package co.jeel.movieapp.controllers;
 
-import co.jeel.movieapp.DTOs.MovieDto;
+import co.jeel.movieapp.DTOs.Movie.MovieDto;
 import co.jeel.movieapp.DTOs.ReviewDto;
-import co.jeel.movieapp.services.MovieService;
 import co.jeel.movieapp.services.ReviewService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

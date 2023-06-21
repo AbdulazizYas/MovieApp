@@ -3,6 +3,7 @@ package co.jeel.movieapp.services;
 import java.util.List;
 
 import co.jeel.movieapp.DTOs.GenreDto;
+import co.jeel.movieapp.DTOs.Movie.MovieListDto;
 import co.jeel.movieapp.DTOs.ReviewDto;
 import co.jeel.movieapp.entities.Genre;
 import co.jeel.movieapp.entities.MovieDetails;
@@ -10,12 +11,10 @@ import co.jeel.movieapp.entities.Review;
 import co.jeel.movieapp.mappers.GenreMapper;
 import co.jeel.movieapp.mappers.ReviewMapper;
 import co.jeel.movieapp.repositories.GenreRepo;
-import co.jeel.movieapp.repositories.MovieDetailsRepo;
-import co.jeel.movieapp.repositories.ReviewRepo;
 import org.springframework.stereotype.Service;
 
 import co.jeel.movieapp.exceptions.NotFoundException;
-import co.jeel.movieapp.DTOs.MovieDto;
+import co.jeel.movieapp.DTOs.Movie.MovieDto;
 import co.jeel.movieapp.entities.Movie;
 import co.jeel.movieapp.mappers.MovieMapper;
 import co.jeel.movieapp.repositories.MovieRepo;
@@ -34,9 +33,9 @@ public class MovieService {
   private final ReviewMapper reviewMapper;
   private final GenreMapper genreMapper;
 
-  public List<MovieDto> getAllMovies(){
+  public List<MovieListDto> getAllMovies(){
 
-    return movieMapper.toMovieDtoList(movieRepo.findAll());
+    return movieMapper.toMovieListDto(movieRepo.findAll());
   }
 
   public MovieDto getMovieById(Long id){

@@ -1,28 +1,25 @@
 ### Add genre
-POST http://localhost:3000/genres
+POST http://localhost:8080/genres
 Content-Type: application/json
 
 {
-  "name": "test"
+  "name": "test2"
 }
 
 ### Get All Genres
-GET http://localhost:3000/genres
+GET http://localhost:8080/genres
 Accept: application/json
 
 ### Get All movies for specific genre
-GET http://localhost:3000/genres/test
+GET http://localhost:8080/genres/test
 Accept: application/json
 
 ### Get Movie's genres
-GET http://localhost:3000/movies/1/genres
+GET http://localhost:8080/movies/1/genres
 Accept: application/json
 
 ### Add genre to a Movie
-POST http://localhost:3000/movies/1/genres/test
+POST http://localhost:8080/movies/1/genres/test2
 Accept: application/json
-
-### Delete Genre
-DELETE http://localhost:3000/genres/
 
 ###

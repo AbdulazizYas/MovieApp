@@ -17,14 +17,17 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler{
 
 
   @ExceptionHandler(NotFoundException.class)
-  @ResponseStatus(HttpStatus.NOT_FOUND)
-  public ResponseEntity<String> handleNotFoundException(
+  @ResponseStatus(code = HttpStatus.NOT_FOUND, reason = "Resource was not found")
+  public NotFoundException handleNotFoundException(
      NotFoundException exception, 
       WebRequest request
   ){
-    return new ResponseEntity<String>(exception.getMessage(), HttpStatus.NOT_FOUND);
+    return exception;
   }
 
+  private ResponseEntity<ApiError> buildResponseError(ApiError error){
+    return new ResponseEntity<ApiError>(error, error.getStatus());
+  }
   @Override
   protected ResponseEntity<Object> handleExceptionInternal(Exception ex, @Nullable Object body, HttpHeaders headers,
       HttpStatus status, WebRequest request) {

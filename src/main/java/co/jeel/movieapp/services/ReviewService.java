@@ -1,14 +1,12 @@
 package co.jeel.movieapp.services;
 
-import co.jeel.movieapp.DTOs.MovieDto;
+import co.jeel.movieapp.DTOs.Movie.MovieDto;
 import co.jeel.movieapp.DTOs.ReviewDto;
 import co.jeel.movieapp.entities.Movie;
-import co.jeel.movieapp.entities.MovieDetails;
 import co.jeel.movieapp.entities.Review;
 import co.jeel.movieapp.exceptions.NotFoundException;
 import co.jeel.movieapp.mappers.MovieMapper;
 import co.jeel.movieapp.mappers.ReviewMapper;
-import co.jeel.movieapp.repositories.MovieDetailsRepo;
 import co.jeel.movieapp.repositories.MovieRepo;
 import co.jeel.movieapp.repositories.ReviewRepo;
 import lombok.RequiredArgsConstructor;

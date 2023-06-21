@@ -1,10 +1,9 @@
 package co.jeel.movieapp.controllers;
 
 import co.jeel.movieapp.DTOs.GenreDto;
-import co.jeel.movieapp.DTOs.MovieDto;
-import co.jeel.movieapp.DTOs.ReviewDto;
+import co.jeel.movieapp.DTOs.Movie.MovieDto;
+import co.jeel.movieapp.DTOs.Movie.MovieListDto;
 import co.jeel.movieapp.services.GenreService;
-import co.jeel.movieapp.services.ReviewService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -30,7 +29,7 @@ class GenreController {
         return this.genreService.addGenre(genreDto);
     }
     @GetMapping("{genreName}")
-    public List<MovieDto> getMoviesByGenre(@PathVariable String genreName){
+    public List<MovieListDto> getMoviesByGenre(@PathVariable String genreName){
         return this.genreService.getGenreMoviesByName(genreName);
     }
 }
