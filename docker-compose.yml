@@ -1,0 +1,36 @@
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_DATABASE=movieapp
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_USER=sa
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - movieapp
+    command:
+      - --skip-name-resolve
+
+  app:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    networks:
+      - movieapp
+
+volumes:
+  mysql-data:
+
+networks:
+  movieapp:
+    driver: bridge
