@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @ToString
 public class MovieDetailsDto {
 
-    private String desc;
+    private String description;
     private LocalDate release_date;
     private Integer duration;
     private Double rating = 0.0;

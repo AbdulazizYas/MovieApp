@@ -31,7 +31,7 @@ public interface MovieMapper {
       movie.setTitle( dto.getTitle() );
       MovieDetailsDto details =  dto.getMovieDetails() ;
       movie.getMovieDetails().setDuration(details.getDuration());
-      movie.getMovieDetails().setDescription(details.getDesc());
+      movie.getMovieDetails().setDescription(details.getDescription());
       movie.getMovieDetails().setRating(details.getRating());
       movie.getMovieDetails().setRelease_date(details.getRelease_date());
     }

@@ -1,36 +1,16 @@
-version: '3'
+version: '3.8'
 services:
-  db:
-    image: mysql:latest
+  movieapp-db:
+    image: postgres:13.5
     restart: always
-    ports:
-      - 3306:3306
     environment:
-      - MYSQL_DATABASE=movieapp
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_ROOT_USER=sa
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=123123
+      - POSTGRES_DB=movieapp
     volumes:
-      - mysql-data:/var/lib/mysql
-    networks:
-      - movieapp
-    command:
-      - --skip-name-resolve
-
-  app:
-    restart: always
-    build:
-      context: .
-      dockerfile: Dockerfile
+      - movieapp:/var/lib/postgresql/data
     ports:
-      - 8080:8080
-    depends_on:
-      - db
-    networks:
-      - movieapp
+      - '5432:5432'
 
 volumes:
-  mysql-data:
-
-networks:
   movieapp:
-    driver: bridge
