@@ -1,5 +1,8 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="MovieappApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <envs>
+      <env name="ACTIVE_PROFILE" value="dev" />
+    </envs>
     <module name="movieapp" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="co.jeel.movieapp.MovieappApplication" />
     <extension name="coverage">
