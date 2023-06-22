@@ -20,7 +20,7 @@ public class MovieDetails {
     private Long id;
 
     @Getter
-    private String desc;
+    private String description;
 
     @Getter
     private LocalDate release_date;

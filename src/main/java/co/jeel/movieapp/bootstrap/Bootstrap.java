@@ -101,7 +101,7 @@ public class Bootstrap implements CommandLineRunner {
 
         movieDetails.setDuration(duration);
         movieDetails.setRelease_date(date);
-        movieDetails.setDesc(desc);
+        movieDetails.setDescription(desc);
 
         movie.setTitle(title);
         List<Genre> genresList = new ArrayList<Genre>();
