@@ -3,7 +3,9 @@ package co.jeel.movieapp.controllers;
 import java.util.List;
 
 import co.jeel.movieapp.DTOs.GenreDto;
+import co.jeel.movieapp.DTOs.Movie.GetMovieDto;
 import co.jeel.movieapp.DTOs.Movie.MovieListDto;
+import co.jeel.movieapp.DTOs.Movie.UpdateMovieDto;
 import co.jeel.movieapp.DTOs.ReviewDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -18,8 +20,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.jeel.movieapp.DTOs.Movie.MovieDto;
+import co.jeel.movieapp.DTOs.Movie.CreateMovieDto;
 import co.jeel.movieapp.services.MovieService;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/movies")
@@ -35,18 +39,18 @@ class MovieController {
     }
 
     @GetMapping("{id}")
-    public MovieDto getById(@PathVariable("id") Long id) {
+    public GetMovieDto getById(@PathVariable("id") Long id) {
         return this.movieService.getMovieById(id);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public MovieDto create(@RequestBody MovieDto movie) {
+    public GetMovieDto create(@Valid @RequestBody CreateMovieDto movie) {
             return this.movieService.createMovie(movie);
     }
 
     @PostMapping("{id}/review")
-    public ResponseEntity<HttpStatus> reviewMovie(@PathVariable Long id, @RequestBody ReviewDto reviewDto) {
+    public ResponseEntity<HttpStatus> reviewMovie(@PathVariable Long id, @Valid @RequestBody ReviewDto reviewDto) {
         this.movieService.reviewMovie(id, reviewDto);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 
@@ -73,7 +77,7 @@ class MovieController {
 
     @PutMapping("{id}")
     @ResponseStatus(HttpStatus.CREATED)
-    public MovieDto update(@PathVariable("id") Long id, @RequestBody MovieDto movie) {
+    public GetMovieDto update(@PathVariable("id") Long id, @RequestBody UpdateMovieDto movie) {
         return movieService.updateMovie(id, movie);
     }
 

@@ -1,6 +1,7 @@
 package co.jeel.movieapp.services;
 
-import co.jeel.movieapp.DTOs.Movie.MovieDto;
+import co.jeel.movieapp.DTOs.Movie.CreateMovieDto;
+import co.jeel.movieapp.DTOs.Movie.GetMovieDto;
 import co.jeel.movieapp.DTOs.ReviewDto;
 import co.jeel.movieapp.entities.Movie;
 import co.jeel.movieapp.entities.Review;
@@ -31,7 +32,7 @@ public class ReviewService {
     return reviewMapper.toReviewDtoList(reviewRepo.findAll());
   }
 
-  public MovieDto getMovieByReview(Long reviewId){
+  public GetMovieDto getMovieByReview(Long reviewId){
     Review review = reviewRepo.findById(reviewId).orElseThrow(() -> new NotFoundException("Movie not found with id: " + reviewId));
     Movie movie = movieRepo.findMovieByReviewsContains(review);
     return movieMapper.toMovieDto(movie, movie.getMovieDetails());

@@ -1,9 +1,9 @@
 package co.jeel.movieapp.services;
 
 import co.jeel.movieapp.DTOs.GenreDto;
-import co.jeel.movieapp.DTOs.Movie.MovieDto;
 import co.jeel.movieapp.DTOs.Movie.MovieListDto;
 import co.jeel.movieapp.entities.Genre;
+import co.jeel.movieapp.exceptions.GenreNotExistException;
 import co.jeel.movieapp.exceptions.NotFoundException;
 import co.jeel.movieapp.mappers.GenreMapper;
 import co.jeel.movieapp.mappers.MovieMapper;
@@ -41,7 +41,7 @@ public class GenreService {
     Genre genre = genreRepo.findGenreByName(genreName);
 
     if (genre == null){
-      throw new NotFoundException("Movie not found with name: " + genreName);
+      throw new GenreNotExistException("Genre not found with name: " + genreName);
     }
 
     return movieMapper.toMovieListDto(genre.getMovies());

@@ -5,6 +5,8 @@ import javax.persistence.*;
 
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Getter
@@ -27,7 +29,7 @@ public class Movie {
 
     // one-to-many relationship
     @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL)
-    private List<Review> reviews;
+    private List<Review> reviews = new ArrayList<>();
 
     // many-to-many relationship
     @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
@@ -36,7 +38,7 @@ public class Movie {
             joinColumns = @JoinColumn(name = "movie_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "genre_id", referencedColumnName = "id")
     )
-    private List<Genre> genres;
+    private List<Genre> genres = new ArrayList<>();
 
 
 

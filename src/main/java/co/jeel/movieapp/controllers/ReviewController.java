@@ -1,6 +1,7 @@
 package co.jeel.movieapp.controllers;
 
-import co.jeel.movieapp.DTOs.Movie.MovieDto;
+import co.jeel.movieapp.DTOs.Movie.CreateMovieDto;
+import co.jeel.movieapp.DTOs.Movie.GetMovieDto;
 import co.jeel.movieapp.DTOs.ReviewDto;
 import co.jeel.movieapp.services.ReviewService;
 import lombok.RequiredArgsConstructor;
@@ -22,7 +23,7 @@ class ReviewController {
     }
 
     @GetMapping("{id}")
-    public MovieDto getMovieByReview(@PathVariable Long id){
+    public GetMovieDto getMovieByReview(@PathVariable Long id){
         return this.reviewService.getMovieByReview(id);
     }
 }

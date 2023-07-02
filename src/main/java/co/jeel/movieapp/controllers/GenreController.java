@@ -1,7 +1,6 @@
 package co.jeel.movieapp.controllers;
 
 import co.jeel.movieapp.DTOs.GenreDto;
-import co.jeel.movieapp.DTOs.Movie.MovieDto;
 import co.jeel.movieapp.DTOs.Movie.MovieListDto;
 import co.jeel.movieapp.services.GenreService;
 import lombok.RequiredArgsConstructor;

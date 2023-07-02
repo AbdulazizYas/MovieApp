@@ -10,13 +10,12 @@ import lombok.ToString;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
 import java.util.List;
 
 @Getter
 @Setter
 @ToString
-public class MovieDto {
+public class GetMovieDto {
 
   private Long id;
 
